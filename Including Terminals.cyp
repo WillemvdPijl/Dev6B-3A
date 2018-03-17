@@ -31,7 +31,23 @@ MATCH
 (LOS03:Terminals),
 (LOS04:Terminals),
 (LOS05:Terminals),
-(LOS06:Terminals)
+(LOS06:Terminals),
+
+(rome_airport:Airport),
+(ROM01:Terminals),
+(ROM02:Terminals),
+(ROM03:Terminals),
+(ROM04:Terminals),
+(ROM05:Terminals),
+(ROM06:Terminals),
+
+(airport_eindhoven:Airport),
+(EIN01:Terminals),
+(EIN02:Terminals),
+(EIN03:Terminals),
+(EIN04:Terminals),
+(EIN05:Terminals),
+(EIN06:Terminals)
 
 WHERE 
 schiphol.name = "Schiphol" AND 
@@ -64,7 +80,23 @@ LOS02.code = "LOS02" AND
 LOS03.code = "LOS03" AND
 LOS04.code = "LOS04" AND
 LOS05.code = "LOS05" AND
-LOS06.code = "LOS06"
+LOS06.code = "LOS06" AND
+
+rome_airport.name = "Rome Airport" AND
+ROM01.code = "ROM01" AND
+ROM02.code = "ROM02" AND
+ROM03.code = "ROM03" AND
+ROM04.code = "ROM04" AND
+ROM05.code = "ROM05" AND
+ROM06.code = "ROM06" AND
+
+airport_eindhoven.name = "Airport Eindhoven" AND
+EIN01.code = "EIN01" AND
+EIN02.code = "EIN02" AND
+EIN03.code = "EIN03" AND
+EIN04.code = "EIN04" AND
+EIN05.code = "EIN05" AND
+EIN06.code = "EIN06"
 
 CREATE 
 (schiphol)-[i1:Includes]->(AMS01),
@@ -93,10 +125,26 @@ CREATE
 (london_south)-[i21:Includes]->(LOS03),
 (london_south)-[i22:Includes]->(LOS04),
 (london_south)-[i23:Includes]->(LOS05),
-(london_south)-[i24:Includes]->(LOS06)
+(london_south)-[i24:Includes]->(LOS06),
+
+(rome_airport)-[i25:Includes]->(ROM01),
+(rome_airport)-[i26:Includes]->(ROM02),
+(rome_airport)-[i27:Includes]->(ROM03),
+(rome_airport)-[i28:Includes]->(ROM04),
+(rome_airport)-[i29:Includes]->(ROM05),
+(rome_airport)-[i30:Includes]->(ROM06),
+
+(airport_eindhoven)-[i31:Includes]->(EIN01),
+(airport_eindhoven)-[i32:Includes]->(EIN02),
+(airport_eindhoven)-[i33:Includes]->(EIN03),
+(airport_eindhoven)-[i34:Includes]->(EIN04),
+(airport_eindhoven)-[i35:Includes]->(EIN05),
+(airport_eindhoven)-[i36:Includes]->(EIN06)
 
 return
 schiphol, AMS01, AMS02, AMS03, AMS04, AMS05, AMS06,
 venezia_marco_polo, VMP01, VMP02, VMP03, VMP04, VMP05, VMP06,
 london_north, LON01, LON02, LON03, LON04, LON05, LON06,
-london_south, LOS01, LOS02, LOS03, LOS04, LOS05, LOS06
+london_south, LOS01, LOS02, LOS03, LOS04, LOS05, LOS06,
+rome_airport, ROM01, ROM02, ROM03, ROM04, ROM05, ROM06,
+airport_eindhoven, EIN01, EIN02, EIN03, EIN04, EIN05, EIN06
