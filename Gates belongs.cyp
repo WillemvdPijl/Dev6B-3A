@@ -24,7 +24,32 @@ MATCH
 (SH15:Gates),
 (SH16:Gates),
 (SH17:Gates),
-(SH18:Gates)
+(SH18:Gates),
+
+(VMP01:Terminals),
+(VMP02:Terminals),
+(VMP03:Terminals),
+(VMP04:Terminals),
+(VMP05:Terminals),
+(VMP06:Terminals),
+(VM01:Gates),
+(VM02:Gates),
+(VM03:Gates),
+(VM04:Gates),
+(VM05:Gates),
+(VM06:Gates),
+(VM07:Gates),
+(VM08:Gates),
+(VM09:Gates),
+(VM10:Gates),
+(VM11:Gates),
+(VM12:Gates),
+(VM13:Gates),
+(VM14:Gates),
+(VM15:Gates),
+(VM16:Gates),
+(VM17:Gates),
+(VM18:Gates)
 
 WHERE
 AMS01.code = "AMS01" AND 
@@ -50,7 +75,32 @@ SH14.number = 14 AND
 SH15.number = 15 AND
 SH16.number = 16 AND
 SH17.number = 17 AND
-SH18.number = 18
+SH18.number = 18 AND
+
+VMP01.code = "VMP01" AND
+VMP02.code = "VMP02" AND
+VMP03.code = "VMP03" AND
+VMP04.code = "VMP04" AND
+VMP05.code = "VMP05" AND
+VMP06.code = "B" AND
+VM01.number = 19 AND
+VM02.number = 20 AND
+VM03.number = 21 AND
+VM04.number = 22 AND
+VM05.number = 23 AND
+VM06.number = 24 AND
+VM07.number = 25 AND
+VM08.number = 26 AND
+VM09.number = 27 AND
+VM10.number = 28 AND
+VM11.number = 28 AND
+VM12.number = 30 AND
+VM13.number = 31 AND
+VM14.number = 32 AND
+VM15.number = 33 AND
+VM16.number = 34 AND
+VM17.number = 35 AND
+VM18.number = 36
 
 CREATE
 (SH01)-[b1:Belongs]->(AMS01),
@@ -75,8 +125,36 @@ CREATE
 
 (SH16)-[b16:Belongs]->(AMS06),
 (SH17)-[b17:Belongs]->(AMS06),
-(SH18)-[b18:Belongs]->(AMS06)
+(SH18)-[b18:Belongs]->(AMS06),
+
+//=============================
+
+(VM01)-[b19:Belongs]->(VMP01),
+(VM02)-[b20:Belongs]->(VMP01),
+(VM03)-[b21:Belongs]->(VMP01),
+
+(VM04)-[b22:Belongs]->(VMP02),
+(VM05)-[b23:Belongs]->(VMP02),
+(VM06)-[b24:Belongs]->(VMP02),
+
+(VM07)-[b25:Belongs]->(VMP03),
+(VM08)-[b26:Belongs]->(VMP03),
+(VM09)-[b27:Belongs]->(VMP03),
+
+(VM10)-[b28:Belongs]->(VMP04),
+(VM11)-[b29:Belongs]->(VMP04),
+(VM12)-[b30:Belongs]->(VMP04),
+
+(VM13)-[b31:Belongs]->(VMP05),
+(VM14)-[b32:Belongs]->(VMP05),
+(VM15)-[b33:Belongs]->(VMP05),
+
+(VM16)-[b34:Belongs]->(VMP06),
+(VM17)-[b35:Belongs]->(VMP06),
+(VM18)-[b36:Belongs]->(VMP06)
 
 RETURN
 AMS01, AMS02, AMS03, AMS04, AMS05, AMS06,
-SH01, SH02, SH03, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16, SH17, SH18
+SH01, SH02, SH03, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16, SH17, SH18,
+VMP01, VMP02, VMP03, VMP04, VMP05, VMP06,
+VM01, VM02, VM03, VM04, VM05, VM06, VM07, VM08, VM09, VM10, VM11, VM12, VM13, VM14, VM15, VM16, VM17, VM18
