@@ -51,6 +51,7 @@ MATCH
 
 WHERE 
 schiphol.name = "Schiphol" AND 
+schiphol.city = "Amsterdam" AND
 AMS01.code = "AMS01" AND 
 AMS02.code = "AMS02" AND
 AMS03.code = "AMS03" AND
@@ -59,6 +60,7 @@ AMS05.code = "AMS05" AND
 AMS06.code = "AMS06" AND
 
 venezia_marco_polo.name = "Venezia Marco Polo" AND
+venezia_marco_polo.city = "Venezia" AND
 VMP01.code = "VMP01" AND
 VMP02.code = "VMP02" AND
 VMP03.code = "VMP03" AND
@@ -67,6 +69,7 @@ VMP05.code = "VMP05" AND
 VMP06.code = "B" AND
 
 london_north.name = "London North" AND
+london_north.city = "London" AND
 LON01.code = "LON01" AND
 LON02.code = "LON02" AND
 LON03.code = "LON03" AND
@@ -75,6 +78,7 @@ LON05.code = "LON05" AND
 LON06.code = "LON06" AND
 
 london_south.name = "London South" AND
+london_south.city = "London" AND
 LOS01.code = "LOS01" AND
 LOS02.code = "LOS02" AND
 LOS03.code = "LOS03" AND
@@ -83,6 +87,7 @@ LOS05.code = "LOS05" AND
 LOS06.code = "LOS06" AND
 
 rome_airport.name = "Rome Airport" AND
+rome_airport.city = "Rome" AND
 ROM01.code = "ROM01" AND
 ROM02.code = "ROM02" AND
 ROM03.code = "ROM03" AND
@@ -91,6 +96,7 @@ ROM05.code = "ROM05" AND
 ROM06.code = "ROM06" AND
 
 airport_eindhoven.name = "Airport Eindhoven" AND
+airport_eindhoven.city = "Eindhoven" AND
 EIN01.code = "EIN01" AND
 EIN02.code = "EIN02" AND
 EIN03.code = "EIN03" AND
