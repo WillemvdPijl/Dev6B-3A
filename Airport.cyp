@@ -1,3 +1,12 @@
+//Deleting everything:
+//MATCH (n)
+//OPTIONAL MATCH (n)-[r]-() 
+//DELETE n, r;
+
+//Displaying everything:
+//match (n)
+//return n;
+
 //Creating Airports-----------------------------------------------------------------------------------------------------
 create(schiphol:Airport{name:"Schiphol", city: "Amsterdam", capacity: 7500, size: "Medium"})
 create(venezia_marco_polo:Airport{name:"Venezia Marco Polo", city: "Venezia", capacity: 15000, size: "Large"})
@@ -6,7 +15,7 @@ create(london_south:Airport{name: "London South", city: "London", capacity: 1000
 create(rome_airport:Airport{name: "Rome Airport", city: "Rome", capacity: 17000, size: "Large"})
 create(airport_eindhoven{name: "Airport Eindhoven", city: "Eindhoven", capacity: 4000, size: "small"})
 
-//Creating Terminals and gates-----------------------------------------------------------------------------------------------------
+//Creating Terminals and Gates-----------------------------------------------------------------------------------------------------
 
 //Schiphol
 create(AMS01:Terminals{code: "AMS01", open: "yes"})
@@ -34,6 +43,7 @@ create(SH15:Gates{number: "015", state: "Boarding"})
 create(SH16:Gates{number: "016", state: "Closed"})
 create(SH17:Gates{number: "017", state: "Boarding"})
 create(SH18:Gates{number: "018", state: "Closed"})
+
 
 //Venezia Marco Polo
 create(VMP01:Terminals{code: "VMP01", open: "yes"})
@@ -170,14 +180,14 @@ create(EI16:Gates{number: "016", state: "Closed"})
 create(EI17:Gates{number: "017", state: "Boarding"})
 create(EI18:Gates{number: "018", state: "Closed"})
 
-//Companies-----------------------------------------------------------------------------------------------------
+//Creating Companies-----------------------------------------------------------------------------------------------------
 create(KLM:Company{name: "KLM", plane_number: "KLM01", asset: "Jonko"})
 create(Lufthansa:Company{name: "Lufthansa", plane_number: "LUFT01", asset: "Braadwurst"})
 create(Ryanair:Company{name: "Ryan Air", plane_number: "RYAN69", asset: "Booze"})
 create(Transavia:Company{name: "Transavia", plane_number: "TRANS01", asset: "Video games"})
 create(Jet2:Company{name: "Jet 2", plane_number: "JET03", asset: "IMMA FIRE MA LASAAARS"})
 
-//Flights-----------------------------------------------------------------------------------------------------
+//Creating Flights-----------------------------------------------------------------------------------------------------
 create(F001:Flights{code: "F001", plane: "Boeing 757"})
 create(F002:Flights{code: "F002", plane: "Boeing 747"})
 create(F003:Flights{code: "F003", plane: "Boeing 737"})
