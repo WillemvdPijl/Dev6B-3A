@@ -193,3 +193,4 @@ create(F003:Flights{code: "F003", plane: "Boeing 737"})
 create(F004:Flights{code: "F004", plane: "Boeing 757"})
 create(F005:Flights{code: "F005", plane: "Boeing 737"})
 create(F006:Flights{code: "F006", plane: "Boeing 737"})
+

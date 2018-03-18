@@ -57,8 +57,17 @@ CREATE
 (Ryanair)-[ba4:Based{rent:30000, since: 1900}]->(rome_airport),
 (Transavia)-[ba5:Based{rent:30000, since: 1920}]->(rome_airport),
 (Transavia)-[ba6:Based{rent:20000, since: 1870}]->(venezia_marco_polo),
-(Jet2)-[ba7:Based{rent:15000, since: 1950}]->(london_south)
+(Jet2)-[ba7:Based{rent:15000, since: 1950}]->(london_south),
 
 //Sells
+(Ryanair)-[s1:Sells{price:90}]->(F001),
+(KLM)-[s2:Sells{price:200}]->(F002),
+(Lufthansa)-[s3:Sells{price: 150}]->(F003),
+(KLM)-[s4:Sells{price:900}]->(F004),
+(Transavia)-[s5:Sells{price:50}]->(F005),
+(Transavia)-[s6:Sells{price:200}]->(F006)
+
 RETURN
-ba1, ba2, ba3, ba4, ba5, ba6, ba7
+
+ba1, ba2, ba3, ba4, ba5, ba6, ba7,
+s1, s2, s3, s4, s5, s6
