@@ -13,7 +13,7 @@ create(venezia_marco_polo:Airport{name:"Venezia Marco Polo", city: "Venezia", ca
 create(london_north:Airport{name: "London North", city: "London", capacity: 5000, size: "Small"})
 create(london_south:Airport{name: "London South", city: "London", capacity: 10000, size: "Medium"})
 create(rome_airport:Airport{name: "Rome Airport", city: "Rome", capacity: 17000, size: "Large"})
-create(airport_eindhoven:Airport{name: "Airport Eindhoven", city: "Eindhoven", capacity: 4000, size: "small"})
+create(airport_eindhoven:Airport{name: "Airport Eindhoven", city: "Eindhoven", capacity: 4000, size: "Small"})
 
 //Creating Terminals and Gates-----------------------------------------------------------------------------------------------------
 
