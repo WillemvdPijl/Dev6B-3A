@@ -49,7 +49,32 @@ MATCH
 (VM15:Gates),
 (VM16:Gates),
 (VM17:Gates),
-(VM18:Gates)
+(VM18:Gates),
+
+(LON01:Terminals),
+(LON02:Terminals),
+(LON03:Terminals),
+(LON04:Terminals),
+(LON05:Terminals),
+(LON06:Terminals),
+(LN01:Gates),
+(LN02:Gates),
+(LN03:Gates),
+(LN04:Gates),
+(LN05:Gates),
+(LN06:Gates),
+(LN07:Gates),
+(LN08:Gates),
+(LN09:Gates),
+(LN10:Gates),
+(LN11:Gates),
+(LN12:Gates),
+(LN13:Gates),
+(LN14:Gates),
+(LN15:Gates),
+(LN16:Gates),
+(LN17:Gates),
+(LN18:Gates)
 
 WHERE
 AMS01.code = "AMS01" AND 
@@ -100,7 +125,32 @@ VM14.number = 32 AND
 VM15.number = 33 AND
 VM16.number = 34 AND
 VM17.number = 35 AND
-VM18.number = 36
+VM18.number = 36 AND
+
+LON01.code = "LON01" AND
+LON02.code = "LON02" AND
+LON03.code = "LON03" AND
+LON04.code = "LON04" AND
+LON05.code = "LON05" AND
+LON06.code = "LON06" AND
+LN01.number = 37 AND
+LN02.number = 38 AND
+LN03.number = 39 AND
+LN04.number = 40 AND
+LN05.number = 41 AND
+LN06.number = 42 AND
+LN07.number = 43 AND
+LN08.number = 44 AND
+LN09.number = 45 AND
+LN10.number = 46 AND
+LN11.number = 47 AND
+LN12.number = 48 AND
+LN13.number = 49 AND
+LN14.number = 50 AND
+LN15.number = 51 AND
+LN16.number = 52 AND
+LN17.number = 53 AND
+LN18.number = 54 
 
 CREATE
 (SH01)-[b1:Belongs]->(AMS01),
@@ -151,10 +201,40 @@ CREATE
 
 (VM16)-[b34:Belongs]->(VMP06),
 (VM17)-[b35:Belongs]->(VMP06),
-(VM18)-[b36:Belongs]->(VMP06)
+(VM18)-[b36:Belongs]->(VMP06),
+
+//=============================
+
+(LN01)-[b37:Belongs]->(LON01),
+(LN02)-[b38:Belongs]->(LON01),
+(LN03)-[b39:Belongs]->(LON01),
+
+(LN04)-[b40:Belongs]->(LON02),
+(LN05)-[b41:Belongs]->(LON02),
+(LN06)-[b42:Belongs]->(LON02),
+
+(LN07)-[b43:Belongs]->(LON03),
+(LN08)-[b44:Belongs]->(LON03),
+(LN09)-[b45:Belongs]->(LON03),
+
+(LN10)-[b46:Belongs]->(LON04),
+(LN11)-[b47:Belongs]->(LON04),
+(LN12)-[b48:Belongs]->(LON04),
+
+(LN13)-[b49:Belongs]->(LON05),
+(LN14)-[b50:Belongs]->(LON05),
+(LN15)-[b51:Belongs]->(LON05),
+
+(LN16)-[b52:Belongs]->(LON06),
+(LN17)-[b53:Belongs]->(LON06),
+(LN18)-[b54:Belongs]->(LON06)
 
 RETURN
 AMS01, AMS02, AMS03, AMS04, AMS05, AMS06,
 SH01, SH02, SH03, SH04, SH05, SH06, SH07, SH08, SH09, SH10, SH11, SH12, SH13, SH14, SH15, SH16, SH17, SH18,
+
 VMP01, VMP02, VMP03, VMP04, VMP05, VMP06,
-VM01, VM02, VM03, VM04, VM05, VM06, VM07, VM08, VM09, VM10, VM11, VM12, VM13, VM14, VM15, VM16, VM17, VM18
+VM01, VM02, VM03, VM04, VM05, VM06, VM07, VM08, VM09, VM10, VM11, VM12, VM13, VM14, VM15, VM16, VM17, VM18,
+
+LON01, LON02, LON03, LON04, LON05, LON06,
+LN01, LN02, LN03, LN04, LN05, LN06, LN07, LN08, LN09, LN10, LN11, LN12, LN13, LN14, LN15, LN16, LN17, LN18
