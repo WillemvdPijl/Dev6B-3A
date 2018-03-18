@@ -99,7 +99,57 @@ MATCH
 (LS15:Gates),
 (LS16:Gates),
 (LS17:Gates),
-(LS18:Gates)
+(LS18:Gates),
+
+(ROM01:Terminals),
+(ROM02:Terminals),
+(ROM03:Terminals),
+(ROM04:Terminals),
+(ROM05:Terminals),
+(ROM06:Terminals),
+(RA01:Gates),
+(RA02:Gates),
+(RA03:Gates),
+(RA04:Gates),
+(RA05:Gates),
+(RA06:Gates),
+(RA07:Gates),
+(RA08:Gates),
+(RA09:Gates),
+(RA10:Gates),
+(RA11:Gates),
+(RA12:Gates),
+(RA13:Gates),
+(RA14:Gates),
+(RA15:Gates),
+(RA16:Gates),
+(RA17:Gates),
+(RA18:Gates),
+
+(EIN01:Terminals),
+(EIN02:Terminals),
+(EIN03:Terminals),
+(EIN04:Terminals),
+(EIN05:Terminals),
+(EIN06:Terminals),
+(EI01:Gates),
+(EI02:Gates),
+(EI03:Gates),
+(EI04:Gates),
+(EI05:Gates),
+(EI06:Gates),
+(EI07:Gates),
+(EI08:Gates),
+(EI09:Gates),
+(EI10:Gates),
+(EI11:Gates),
+(EI12:Gates),
+(EI13:Gates),
+(EI14:Gates),
+(EI15:Gates),
+(EI16:Gates),
+(EI17:Gates),
+(EI18:Gates)
 
 WHERE
 AMS01.code = "AMS01" AND 
@@ -143,7 +193,6 @@ VM07.number = 25 AND
 VM08.number = 26 AND
 VM09.number = 27 AND
 VM10.number = 28 AND
-VM11.number = 28 AND
 VM12.number = 30 AND
 VM13.number = 31 AND
 VM14.number = 32 AND
@@ -200,7 +249,57 @@ LS14.number = 68 AND
 LS15.number = 69 AND
 LS16.number = 70 AND
 LS17.number = 71 AND
-LS18.number = 72 
+LS18.number = 72 AND
+
+ROM01.code = "ROM01" AND
+ROM02.code = "ROM02" AND
+ROM03.code = "ROM03" AND
+ROM04.code = "ROM04" AND
+ROM05.code = "ROM05" AND
+ROM06.code = "ROM06" AND
+RA01.number = 73 AND
+RA02.number = 74 AND
+RA03.number = 75 AND
+RA04.number = 76 AND
+RA05.number = 77 AND
+RA06.number = 78 AND
+RA07.number = 79 AND
+RA08.number = 80 AND
+RA09.number = 81 AND
+RA10.number = 82 AND
+RA11.number = 83 AND
+RA12.number = 84 AND
+RA13.number = 85 AND
+RA14.number = 86 AND
+RA15.number = 87 AND
+RA16.number = 88 AND
+RA17.number = 89 AND
+RA18.number = 90 AND
+
+EIN01.code = "EIN01" AND
+EIN02.code = "EIN02" AND
+EIN03.code = "EIN03" AND
+EIN04.code = "EIN04" AND
+EIN05.code = "EIN05" AND
+EIN06.code = "EIN06" AND
+EI01.number = 91 AND
+EI02.number = 92 AND
+EI03.number = 93 AND
+EI04.number = 94 AND
+EI05.number = 95 AND
+EI06.number = 96 AND
+EI07.number = 97 AND
+EI08.number = 98 AND
+EI09.number = 99 AND
+EI10.number = 100 AND
+EI11.number = 101 AND
+EI12.number = 102 AND
+EI13.number = 103 AND
+EI14.number = 104 AND
+EI15.number = 105 AND
+EI16.number = 106 AND
+EI17.number = 107 AND
+EI18.number = 108
 
 CREATE
 (SH01)-[b1:Belongs]->(AMS01),
@@ -277,7 +376,7 @@ CREATE
 
 (LN16)-[b52:Belongs]->(LON06),
 (LN17)-[b53:Belongs]->(LON06),
-(LN18)-[b54:Belongs]->(LON06)
+(LN18)-[b54:Belongs]->(LON06),
 
 //=============================
 
@@ -303,7 +402,59 @@ CREATE
 
 (LS16)-[b70:Belongs]->(LOS06),
 (LS17)-[b71:Belongs]->(LOS06),
-(LS18)-[b72:Belongs]->(LOS06)
+(LS18)-[b72:Belongs]->(LOS06),
+
+//=============================
+
+(RA01)-[b73:Belongs]->(ROM01),
+(RA02)-[b74:Belongs]->(ROM01),
+(RA03)-[b75:Belongs]->(ROM01),
+
+(RA04)-[b76:Belongs]->(ROM02),
+(RA05)-[b77:Belongs]->(ROM02),
+(RA06)-[b78:Belongs]->(ROM02),
+
+(RA07)-[b79:Belongs]->(ROM03),
+(RA08)-[b80:Belongs]->(ROM03),
+(RA09)-[b81:Belongs]->(ROM03),
+
+(RA10)-[b82:Belongs]->(ROM04),
+(RA11)-[b83:Belongs]->(ROM04),
+(RA12)-[b84:Belongs]->(ROM04),
+
+(RA13)-[b85:Belongs]->(ROM05),
+(RA14)-[b86:Belongs]->(ROM05),
+(RA15)-[b87:Belongs]->(ROM05),
+
+(RA16)-[b88:Belongs]->(ROM06),
+(RA17)-[b89:Belongs]->(ROM06),
+(RA18)-[b90:Belongs]->(ROM06),
+
+//=============================
+
+(EI01)-[b91:Belongs]->(EIN01),
+(EI02)-[b92:Belongs]->(EIN01),
+(EI03)-[b93:Belongs]->(EIN01),
+
+(EI04)-[b94:Belongs]->(EIN02),
+(EI05)-[b95:Belongs]->(EIN02),
+(EI06)-[b96:Belongs]->(EIN02),
+
+(EI07)-[b97:Belongs]->(EIN03),
+(EI08)-[b98:Belongs]->(EIN03),
+(EI09)-[b99:Belongs]->(EIN03),
+
+(EI10)-[b100:Belongs]->(EIN04),
+(EI11)-[b101:Belongs]->(EIN04),
+(EI12)-[b102:Belongs]->(EIN04),
+
+(EI13)-[b103:Belongs]->(EIN05),
+(EI14)-[b104:Belongs]->(EIN05),
+(EI15)-[b105:Belongs]->(EIN05),
+
+(EI16)-[b106:Belongs]->(EIN06),
+(EI17)-[b107:Belongs]->(EIN06),
+(EI18)-[b108:Belongs]->(EIN06)
 
 RETURN
 AMS01, AMS02, AMS03, AMS04, AMS05, AMS06,
@@ -316,4 +467,10 @@ LON01, LON02, LON03, LON04, LON05, LON06,
 LN01, LN02, LN03, LN04, LN05, LN06, LN07, LN08, LN09, LN10, LN11, LN12, LN13, LN14, LN15, LN16, LN17, LN18,
 
 LOS01, LOS02, LOS03, LOS04, LOS05, LOS06,
-LS01, LS02, LS03, LS04, LS05, LS06, LS07, LS08, LS09, LS10, LS11, LS12, LS13, LS14, LS15, LS16, LS17, LS18
+LS01, LS02, LS03, LS04, LS05, LS06, LS07, LS08, LS09, LS10, LS11, LS12, LS13, LS14, LS15, LS16, LS17, LS18,
+
+ROM01, ROM02, ROM03, ROM04, ROM05, ROM06,
+RA01, RA02, RA03, RA04, RA05, RA06, RA07, RA08, RA09, RA10, RA11, RA12, RA13, RA14, RA15, RA16, RA17, RA18,
+
+EIN01, EIN02, EIN03, EIN04, EIN05, EIN06,
+EI01, EI02, EI03, EI04, EI05, EI06, EI07, EI08, EI09, EI10, EI11, EI12, EI13, EI14, EI15, EI16, EI17, EI18
