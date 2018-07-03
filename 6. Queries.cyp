@@ -8,9 +8,10 @@ n.name, n.capacity;
 
 // 2. Find the total capacity of the airports in the same city. Output the name and the capacity.
 MATCH
-(n:Airport)
+(n:Airport),
+(m:Airport)
 WHERE
-n.city = n.city
+n.city = m.city
 Return
 n.city, sum(n.capacity);
 
